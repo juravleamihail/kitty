@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Employee
+    class Employee : Person
     {
 
     }

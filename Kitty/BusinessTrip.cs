@@ -8,13 +8,15 @@ namespace Kitty
 {
     class BusinessTrip
     {
-        private int user_id;
-        private string departure;
-        private string destination;
-        private string startingDate;
-        private string endDate;
+        private Employee Employee;
+        private Location departure;
+        private Location destination;
+        private DateTime startingDate;   
+        private DateTime endDate;
         private string phone;
         private string accommodation;
-        enum STATES { STATE_CANCELED = 0,STATE_APPROVED =1,STATE_PENDING=2 }
+        enum STATES { STATE_CANCELED = 0, STATE_APPROVED = 1, STATE_PENDING = 2 }
+
+             
     }
 }
