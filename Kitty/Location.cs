@@ -8,5 +8,6 @@ namespace Kitty
 {
     class Location
     {
+
     }
 }
