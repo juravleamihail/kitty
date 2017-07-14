@@ -2,5 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Kitty/bin/Debug
-/Kitty/obj/Debug
+/Kitty/bin
+/Kitty/obj
