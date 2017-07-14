@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Site
+    class Site: Employee
     {
+        private string destinationLocation;
+        private string departureLocation;
+
+
     }
 }
