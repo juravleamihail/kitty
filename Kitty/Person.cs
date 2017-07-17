@@ -8,6 +8,10 @@ namespace Kitty
 {
     class Person
     {
-        public string Name;
+        private int id;
+        private string name;
+        private string mailAddress;
+
+
     }
 }
