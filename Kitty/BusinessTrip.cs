@@ -15,7 +15,8 @@ namespace Kitty
         private DateTime endDate;
         private string phone;
         private string accommodation;
-        enum STATES { STATE_CANCELED = 0, STATE_APPROVED = 1, STATE_PENDING = 2 }
+       
+        enum status { STATE_CANCELED = 0, STATE_APPROVED = 1, STATE_PENDING = 2 }
 
              
     }

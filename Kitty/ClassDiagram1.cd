@@ -2,8 +2,11 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Kitty.BusinessTrip">
     <Position X="4" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Enum Name="Kitty.BusinessTrip.STATES" Collapsed="true">
+      <Enum Name="Kitty.BusinessTrip.status" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>BusinessTrip.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -29,7 +32,7 @@
   <Class Name="Kitty.Location">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Location.cs</FileName>
     </TypeIdentifier>
   </Class>

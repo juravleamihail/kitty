@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Office : Location
+    class Office
     {
         private Manager manager;
         private List<Employee> employees;
