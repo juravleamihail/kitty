@@ -8,6 +8,16 @@ namespace Kitty
 {
     class Employee : Person
     {
+        public Employee(string Name, string email)
+        {
+            this.name = Name;
+            this.mailAddress = email; 
+        }
 
+        public void createBT()
+        {
+
+
+        }
     }
 }

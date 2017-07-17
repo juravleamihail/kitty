@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Person
+    abstract class Person
     {
-        private int id;
-        private string name;
-        private string mailAddress;
-
-
+        protected string name;
+        protected string mailAddress;
     }
 }
