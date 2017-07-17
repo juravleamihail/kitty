@@ -8,6 +8,6 @@ namespace Kitty
 {
     class Location
     {
-        private List<string> city = new List<string>() { "Bucuresti","Instanbul","Dubai"};
+        public List<string> City = new List<string>() { "Bucuresti","Instanbul","Dubai"};
     }
 }
