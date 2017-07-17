@@ -9,5 +9,6 @@ namespace Kitty
     class Location
     {
         public List<string> City = new List<string>() { "Bucuresti","Instanbul","Dubai"};
+       
     }
 }
