@@ -26,7 +26,7 @@ namespace Kitty
             switch (caseSwitch)
             {
                 case 1:
-                    New.departure = "Sibiu";
+                    New.departure.Where= "Sibiu";
                     break;
                 case 2:
                     Console.WriteLine("Case 2");
