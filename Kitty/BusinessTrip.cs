@@ -17,7 +17,7 @@ namespace Kitty
         private string accommodation;
 
         enum STATES { STATE_CANCELED = 0, STATE_APPROVED = 1, STATE_PENDING = 2 }
-
-             
+        private string meanOfTransportation;
+        private string otherNeeds;
     }
 }
