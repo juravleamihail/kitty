@@ -6,40 +6,51 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Employee : Person
-    { 
-    
-        public Employee(string Name, string email)
+    public class Employee : Person
+    {
+        public Office Office;
+
+
+         public Employee(string Name, string email):base(Name)
         {
+            Manager X = new Manager("X");
+            Office = new Office(X);
             this.name = Name;
-            this.mailAddress = email; 
+            this.mailAddress = email;
         }
 
-        public void createBT(BusinessTrip New)
+        public override BusinessTrip GetNewBT()
         {
-            New.Employee = new Employee(name, mailAddress);
-            
-            Console.WriteLine("Insert Business Trip data");
-            Console.WriteLine("Choose departure city:");
-            int caseSwitch = 1;
+            var bt = new BusinessTrip(this, Office.Manager);
+            return bt;
+        }
 
+
+        public string ChooseCity()
+        {
+
+            int caseSwitch = 0;
+            string location = null;
+            Console.Write("Alegeti optiunea: 1 - SB, 2 - CJ, 3 -B , 4 - IS, 5 - TM");
             switch (caseSwitch)
             {
                 case 1:
-                    New.departure = "Sibiu";
+                    location = "Sibiu";
                     break;
                 case 2:
-                    Console.WriteLine("Case 2");
+                    location = "Cluj-Napoca";
                     break;
-                default:
-                    Console.WriteLine("Default case");
+                case 3:
+                    location = "Bucuresti";
+                    break;
+                case 4:
+                    location = "Iasi";
+                    break;
+                case 5:
+                    location = "Timisoara";
                     break;
             }
-
-
-
-
+            return location;
         }
-
     }
 }

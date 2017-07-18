@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Manager : Employee
+    public class Manager : Person
     {
-        public Manager(string Name, string email) : base(Name, email)
-        {
 
+        public Manager(string name) : base (name)
+        { }
+        
+
+        public override BusinessTrip GetNewBT()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void aproveBT()
+        { }
+                
         }
     }
-}
+
