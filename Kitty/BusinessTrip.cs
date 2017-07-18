@@ -8,7 +8,7 @@ namespace Kitty
 {
     public class BusinessTrip
     {
-        private Employee Employee;
+        private Employee employee;
         private Location departure;
         private Location destination;
         private DateTime startingDate;
@@ -21,16 +21,23 @@ namespace Kitty
         private string meanOfTransportation;
         private string otherNeeds;
 
-        public Employee Employee1
+        public BusinessTrip(Employee employee, Manager manager)
+        {
+            departure = new Location();
+            destination = new Location();
+            this.employee = employee;
+        }
+
+        public Employee Employee
         {
             get
             {
-                return Employee;
+                return employee;
             }
 
             set
             {
-                Employee = value;
+                employee = value;
             }
         }
 
