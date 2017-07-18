@@ -4,5 +4,9 @@
 
 /Kitty/bin
 /Kitty/obj
-/Kitty/packages/NUnit.3.7.1
+/Kitty/packages
+/Tests/bin
+/Tests/obj
+/Tests/packages
+
 *.suo

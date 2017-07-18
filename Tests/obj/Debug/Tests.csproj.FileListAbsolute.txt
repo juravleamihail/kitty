@@ -1,8 +1,0 @@
-C:\Users\iquest\Source\Repos\kitty\Tests\bin\Debug\Tests.dll
-C:\Users\iquest\Source\Repos\kitty\Tests\bin\Debug\Tests.pdb
-C:\Users\iquest\Source\Repos\kitty\Tests\bin\Debug\Kitty.exe
-C:\Users\iquest\Source\Repos\kitty\Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\iquest\Source\Repos\kitty\Tests\bin\Debug\Kitty.pdb
-C:\Users\iquest\Source\Repos\kitty\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
-C:\Users\iquest\Source\Repos\kitty\Tests\obj\Debug\Tests.dll
-C:\Users\iquest\Source\Repos\kitty\Tests\obj\Debug\Tests.pdb
