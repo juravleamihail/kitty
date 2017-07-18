@@ -4,3 +4,5 @@
 
 /Kitty/bin
 /Kitty/obj
+/Kitty/packages/NUnit.3.7.1
+*.suo
