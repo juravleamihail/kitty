@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    public class Location
+    internal class Location
     {
         public string where;
 

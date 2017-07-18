@@ -20,31 +20,46 @@ namespace Kitty
             New.Employee = new Employee(name, mailAddress);
 
             Console.WriteLine("Insert Business Trip data");
+
             Console.WriteLine("Choose departure city:");
+            New.departure = ChooseCity(Location departure);
+
+            Console.WriteLine("Choose destination city:");
+            New.departure = ChooseCity(Location departure);
+
         }
 
-        public void ChooseCity(BusinessTrip New);
+       
+
+        public Location ChooseCity(Location loc);
         {
+           
             int caseSwitch = 0;
 
             switch (caseSwitch)
             {
                 Console.Write("Alegeti optiunea: 1 - SB, 2 - CJ, 3 -B , 4 - IS, 5 - TM");
                 case 1:
-                    New.departure.Where= "Sibiu";
+                    where= "Sibiu";
                     break;
                 case 2:
-                    New.departure.Where = "Cluj-Napoca";
+                    where = "Cluj-Napoca";
                     break;
                 case 3:
-                    New.departure.Where = "Bucuresti";
+                   where = "Bucuresti";
                     break;
                 case 5:
-                    New.departure.Where = "Iasi";
+                    where = "Iasi";
                     break;
                 case 6:
-                    New.departure.Where = "Timisoara";
+                    where = "Timisoara";
                     break;
-          }
+
+                default:
+                    return Write("Choose a city!");
        }
+            return loc;
+     }   
+  
+}
 }
