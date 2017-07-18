@@ -8,35 +8,32 @@ namespace Tests
     public class EmployeeTest
     {
         private BusinessTrip newBT;
+        private Office office;
 
+        [TestInitialize]
+        public void Setup()
+        {
+            office = new Office(new Manager("M", "M@office.com"));
+        }
 
         [TestMethod]
         public void EmployeeCanBeCreated()
         {
             //Arange
-            Employee john = new Employee("John", "john@yahoo.com");
+            Employee john = office.CreateEmployee("John", "john@yahoo.com");
 
             Assert.IsNotNull(john);
 
         }
 
         [TestMethod]
-        public void AnEmployeeBelongsToAOffice()
-        {
-            //Arange
-            Employee john = new Employee("John", "john@yahoo.com");
-
-            Assert.IsNotNull(john.Office);
-
-        }
-
-        [TestMethod]
         public void AnEmployeeHasAManager()
         {
-            //Arange
-            Employee john = new Employee("John", "john@yahoo.com");
 
-            Assert.IsNotNull(john.Office.Manager);
+            //Arange
+            Employee john = GetNewEmployee();
+
+            Assert.IsNotNull(john.Manager);
 
         }
 
@@ -44,7 +41,7 @@ namespace Tests
         public void ShouldCreateNewBusinessTripRequest()
         {
             //Arange
-            Employee john = new Employee("John", "john@yahoo.com");
+            Employee john = GetNewEmployee();
 
             newBT = john.GetNewBT();
             
@@ -54,7 +51,7 @@ namespace Tests
         public void NewlyCreatedTestBelongsToEmployee()
         {
             //Arange
-            Employee john = new Employee("John", "john@yahoo.com");
+            Employee john = GetNewEmployee();
 
             newBT = john.GetNewBT();
 
@@ -62,11 +59,9 @@ namespace Tests
 
         }
 
-        static void Main(string[] args)
+        private Employee GetNewEmployee()
         {
-            EmployeeTest a = new EmployeeTest();
-            a.ShouldCreateNewBusinessTripRequest();
-
+            return office.CreateEmployee("John", "john@yahoo.com");
         }
     
     }

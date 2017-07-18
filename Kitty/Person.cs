@@ -34,8 +34,7 @@ namespace Kitty
                 mailAddress = value;
             }
         }
-
-        public abstract BusinessTrip GetNewBT();
+        
 
         public string ChooseCity()
         {

@@ -8,20 +8,17 @@ namespace Kitty
 {
     public class Employee : Person
     {
-        public Office Office;
+        public Manager Manager;
 
-
-         public Employee(string Name, string email):base(Name)
+        public Employee(string Name, string email):base(Name)
         {
-            Manager X = new Manager("X");
-            Office = new Office(X);
             this.name = Name;
             this.mailAddress = email;
         }
 
-        public override BusinessTrip GetNewBT()
+        public BusinessTrip GetNewBT()
         {
-            var bt = new BusinessTrip(this, Office.Manager);
+            var bt = new BusinessTrip(this, Manager);
             return bt;
         }
 
