@@ -17,48 +17,49 @@ namespace Kitty
 
         public void createBT(BusinessTrip New)
         {
-            New.Employee = new Employee(name, mailAddress);
+          
 
             Console.WriteLine("Insert Business Trip data");
 
             Console.WriteLine("Choose departure city:");
-            New.departure = ChooseCity(Location departure);
+            New.departure = ChooseCity();
 
             Console.WriteLine("Choose destination city:");
-            New.departure = ChooseCity(Location departure);
+            New.departure.where = ChooseCity();
 
         }
 
        
 
-        public Location ChooseCity(Location loc);
+        public string ChooseCity();
         {
            
             int caseSwitch = 0;
+            string location;
 
             switch (caseSwitch)
             {
                 Console.Write("Alegeti optiunea: 1 - SB, 2 - CJ, 3 -B , 4 - IS, 5 - TM");
                 case 1:
-                    where= "Sibiu";
+                    location = "Sibiu";
                     break;
                 case 2:
-                    where = "Cluj-Napoca";
+                    location = "Cluj-Napoca";
                     break;
                 case 3:
-                   where = "Bucuresti";
+                     location = "Bucuresti";
+                    break;
+                case 4:
+                    location = "Iasi";
                     break;
                 case 5:
-                    where = "Iasi";
-                    break;
-                case 6:
-                    where = "Timisoara";
+                    location = "Timisoara";
                     break;
 
                 default:
-                    return Write("Choose a city!");
+   
        }
-            return loc;
+            return location;
      }   
   
 }
