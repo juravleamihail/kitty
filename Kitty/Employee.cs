@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Employee : Person
-    { 
-    
+    public class Employee : Person
+    {
+
         public Employee(string Name, string email)
         {
             this.name = Name;
-            this.mailAddress = email; 
+            this.mailAddress = email;
         }
 
         public void createBT(BusinessTrip New)
         {
             New.Employee = new Employee(name, mailAddress);
-            
+
             Console.WriteLine("Insert Business Trip data");
             Console.WriteLine("Choose departure city:");
         }
 
-        private void ChooseCity();
+        public void ChooseCity(BusinessTrip New);
         {
-             int caseSwitch = 0;
+            int caseSwitch = 0;
 
             switch (caseSwitch)
             {
@@ -45,7 +45,6 @@ namespace Kitty
                 case 6:
                     New.departure.Where = "Timisoara";
                     break;
-            }
+          }
+       }
 }
-
-    }

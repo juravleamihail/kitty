@@ -6,21 +6,10 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class Location
+    public class Location
     {
-        private string where;
+        public string where;
 
-        public string Where
-        {
-            get
-            {
-                return where;
-            }
-
-            set
-            {
-                where = value;
-            }
-        }
+        
     }
 }

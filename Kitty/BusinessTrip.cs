@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kitty
 {
-    class BusinessTrip
+    public class BusinessTrip
     {
         public Employee Employee;
         public Location departure;
