@@ -9,8 +9,10 @@ namespace Kitty
     class Manager : Employee
     {
         public Manager(string Name, string email) : base(Name, email)
-        {
-
+        { }
+            private void aproveBT()
+        { }
+                
         }
     }
-}
+
