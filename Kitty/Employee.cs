@@ -21,25 +21,31 @@ namespace Kitty
             
             Console.WriteLine("Insert Business Trip data");
             Console.WriteLine("Choose departure city:");
-            int caseSwitch = 1;
+        }
+
+        private void ChooseCity();
+        {
+             int caseSwitch = 0;
 
             switch (caseSwitch)
             {
+                Console.Write("Alegeti optiunea: 1 - SB, 2 - CJ, 3 -B , 4 - IS, 5 - TM");
                 case 1:
                     New.departure.Where= "Sibiu";
                     break;
                 case 2:
-                    Console.WriteLine("Case 2");
+                    New.departure.Where = "Cluj-Napoca";
                     break;
-                default:
-                    Console.WriteLine("Default case");
+                case 3:
+                    New.departure.Where = "Bucuresti";
+                    break;
+                case 5:
+                    New.departure.Where = "Iasi";
+                    break;
+                case 6:
+                    New.departure.Where = "Timisoara";
                     break;
             }
-
-
-
-
-        }
+}
 
     }
-}

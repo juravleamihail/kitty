@@ -8,18 +8,18 @@ namespace Kitty
 {
     class Location
     {
-        private string x;
+        private string where;
 
         public string Where
         {
             get
             {
-                return x;
+                return where;
             }
 
             set
             {
-                x = value;
+                where = value;
             }
         }
     }
