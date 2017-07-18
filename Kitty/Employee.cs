@@ -15,32 +15,36 @@ namespace Kitty
             this.mailAddress = email;
         }
 
-        public void createBT(BusinessTrip New)
+        public void createBTRequest(BusinessTrip New)
         {
 
 
             Console.WriteLine("Insert Business Trip data");
 
             Console.WriteLine("Choose departure city:");
-            New.departure.where = ChooseCity();
+            New.Departure.Where = ChooseCity();
 
             Console.WriteLine("Choose destination city:");
-            New.departure.where = ChooseCity();
+            New.Destination.Where = ChooseCity();
 
 
             Console.WriteLine("Insert starting date:");
-            Console.WriteLine("Day:{0}", New.startingDate.Day);
-            Console.WriteLine("Month:{0}", New.startingDate.Month);
-            Console.WriteLine("Year:{0}", New.startingDate.Year);
+            Console.WriteLine("Day:{0}", New.StartingDate.Day);
+            Console.WriteLine("Month:{0}", New.StartingDate.Month);
+            Console.WriteLine("Year:{0}", New.StartingDate.Year);
 
             Console.WriteLine("Insert end date:");
-            Console.WriteLine("Day:{0}", New.endDate.Day);
-            Console.WriteLine("Month:{0}", New.endDate.Month);
-            Console.WriteLine("Year:{0}", New.endDate.Year);
+            Console.WriteLine("Day:{0}", New.EndDate.Day);
+            Console.WriteLine("Month:{0}", New.EndDate.Month);
+            Console.WriteLine("Year:{0}", New.EndDate.Year);
 
             Console.WriteLine("Insert your phone:");
             string input = Console.ReadLine();
-            New.phone = input;
+            New.Phone = input;
+
+
+
+
 
         }
 
