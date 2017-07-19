@@ -25,10 +25,12 @@ namespace Kitty
 
         public string ChooseCity()
         {
-
-            int caseSwitch = 0;
+            string stringSwitch;
+            int caseSwitch;
             string location = null;
-            Console.Write("Alegeti optiunea: 1 - SB, 2 - CJ, 3 -B , 4 - IS, 5 - TM");
+            Console.WriteLine("Alegeti optiunea: 1 - SB, 2 - CJ, 3 -B , 4 - IS, 5 - TM");
+            stringSwitch = Console.ReadLine();
+            caseSwitch = Int32.Parse(stringSwitch);
             switch (caseSwitch)
             {
                 case 1:
