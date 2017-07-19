@@ -13,7 +13,7 @@ namespace Tests
         [TestInitialize]
         public void Setup()
         {
-            office = new Office(new Manager("M", "M@office.com"));
+            office = new Office(new Manager("M", "M@office.com"),new Location("Sibiu"));
         }
 
         [TestMethod]
@@ -23,6 +23,16 @@ namespace Tests
             Employee john = office.CreateEmployee("John", "john@yahoo.com");
 
             Assert.IsNotNull(john);
+
+        }
+
+        [TestMethod]
+        public void AnEmployeeHasAnOffice()
+        {
+            //Arange
+            Employee john = office.CreateEmployee("John", "john@yahoo.com");
+
+            Assert.IsNotNull(john.Office);
 
         }
 
