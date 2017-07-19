@@ -15,11 +15,11 @@ namespace Kitty
             Manager manager = new Manager("vasilica","vasi69@brazzers.com");
             Office office = new Office(manager);
             office.CreateEmployee("sclav", "fara mail");
-            BusinessTrip bt = new BusinessTrip(emp, manager, "Botosani");
-            emp.GetNewBT();
+            BusinessTrip bt = new BusinessTrip(emp, manager);
+            emp.GetNewBT("Vaslui");     
             Console.WriteLine(location.ChooseCity());
-            Console.WriteLine(bt.Departure.Where);
-
+            //Console.WriteLine(bt.Departure.Where);
+            Console.WriteLine(bt.Departure.ChangeDeparture());
 
             Console.ReadLine();
 

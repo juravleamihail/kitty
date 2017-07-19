@@ -16,9 +16,10 @@ namespace Kitty
             this.mailAddress = email;
         }
 
-        public BusinessTrip GetNewBT()
+        public BusinessTrip GetNewBT(String Departure)
         {
             var bt = new BusinessTrip(this, Manager);
+            bt.Departure.Where = Departure;
             return bt;
         }
 
