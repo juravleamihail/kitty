@@ -104,6 +104,7 @@ namespace Tests
             BusinessTrip bt = emp.GetNewBT();
             bt.Send();
             Assert.IsNotNull(manager.BTs);
+            //
         }
 
     }
