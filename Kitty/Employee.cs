@@ -23,21 +23,6 @@ namespace Kitty
             return bt;
         }
 
-        public BusinessTrip fillBT(Location destination, DateTime startDate, DateTime endDate, string phone, string bankCard, bool accomodation, string meaningOfTranspartion)
-        {
-            BusinessTrip bt = GetNewBT();
-            bt.Departure = this.Office.Location;
-            bt.Destination = destination;
-            bt.StartingDate = startDate;
-            bt.EndDate = endDate;
-            bt.Phone = phone;
-            bt.BankCard = bankCard;
-            bt.AccommodationIsNeeded = accomodation;
-            bt.MeanOfTransportation = meaningOfTranspartion;
-            return bt;
-        }
-
-
         public string ChooseCity()
         {
             string stringSwitch;
