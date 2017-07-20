@@ -99,9 +99,11 @@ namespace Tests
         }
 
         [TestMethod]
-        public void ManagerGetFilledBusinessTrip()
+        public void BusinessTripIsSend()
         {
-
+            BusinessTrip bt = emp.GetNewBT();
+            bt.Send();
+            Assert.IsNotNull(manager.BTs);
         }
 
     }

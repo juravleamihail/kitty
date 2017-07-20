@@ -34,7 +34,6 @@ namespace Kitty
 
         public void Send()
         {
-
             Manager manager;
             manager = this.Employee.Office.Manager;
             manager.BTs.Add(this);
