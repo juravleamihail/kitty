@@ -14,18 +14,20 @@ namespace Kitty
         public DateTime StartingDate;
         public DateTime EndDate;
         public string Phone;
+        public string BankCard;
         public bool AccommodationIsNeeded;
 
         enum STATES { STATE_CANCELED = 0, STATE_APPROVED = 1, STATE_PENDING = 2 }
         public string MeanOfTransportation;
-        public string OtherNeeds;
+        //public string OtherNeeds;
 
         public BusinessTrip(Employee employee, Manager manager)
         {
             Departure = employee.Office.Location;
             Employee = employee;
-        }  
-        
+        }
+
+
         public void Send()
         {
 
