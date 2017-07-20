@@ -3,6 +3,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Kitty;
 using System.Xml.Serialization;
 using System.Text;
+using System.Collections.Generic;
+using System.Linq;
+using Kitty.Tools;
 
 namespace Tests
 {
@@ -23,11 +26,11 @@ namespace Tests
         [TestInitialize]
         public void Setup()
         {
-            emp = new Employee("gigel", "non");
             manager = new Manager("boss", "fara");
-
             Location location = new Location("Brasov");
-            emp.Office = new Office(manager, location);
+
+            var office = new Office(manager, location);
+            emp = office.CreateEmployee("gigel", "non");
 
             startingDate=new DateTime(2008, 04, 14);
             endDate = new DateTime(2008, 04, 30);
@@ -35,6 +38,8 @@ namespace Tests
             bankCard = "1502 4023 3453 3252";
             meaningOfTransportation = "bmw";
             AccommodationIsNeeded = true;
+
+            EmailServiceLocator.SetEmailService(new EmailServiceTest());
 
         }
 
@@ -50,13 +55,7 @@ namespace Tests
         public void BusinessTripCanBeFill()
         {
             BusinessTrip bt = emp.GetNewBT();
-            bt.Departure = new Location("X");
-            bt.Destination = new Location("X");
-            bt.StartingDate = DateTime.Now;
-            bt.EndDate = endDate;
-            bt.Phone = phone;
-            bt.BankCard = bankCard;
-            bt.MeanOfTransportation = "Bus";
+            FillBT(bt);
 
             XmlSerializer ser = new XmlSerializer(typeof(BusinessTrip));
             StringBuilder sb = new System.Text.StringBuilder();
@@ -99,9 +98,95 @@ namespace Tests
         }
 
         [TestMethod]
-        public void ManagerGetFilledBusinessTrip()
+        public void ASendedBTGetsPendingStatus()
         {
+            BusinessTrip bt = emp.GetNewBT();
+            FillBT(bt);
+            bt.Send();
+            Assert.AreEqual(BusinessTrip.STATES.STATE_PENDING, bt.Status);
+        }
 
+        [TestMethod]
+        public void AllSendedBTAreInsertedInRepository()
+        {
+            for(int i=0;i<10;i++)
+            {
+                SendABt();
+            }
+
+
+            BusinessTripRepository businessTripRepo = new BusinessTripRepository();
+            IEnumerable<BusinessTrip> storedBts = businessTripRepo.GetAllBts();
+
+            Assert.AreEqual(10, storedBts.Count());
+        }
+
+        private BusinessTrip SendABt()
+        {
+            BusinessTrip bt = emp.GetNewBT();
+            FillBT(bt);
+            bt.Send();
+
+            return bt;
+        }
+
+        [TestMethod]
+        public void ASendedBTIsInsertedInRepository()
+        {
+            var bt = SendABt();
+
+             BusinessTripRepository businessTripRepo = new BusinessTripRepository();
+            IEnumerable<BusinessTrip> storedBts = businessTripRepo.GetAllBts();
+            
+            Assert.IsTrue(storedBts.Any(b=>b.ID == bt.ID));
+        }
+
+        [TestMethod]
+        public void ASendedBTCanBeApproved()
+        {
+            var bt = SendABt();
+
+            BusinessTripRepository businessTripRepo = new BusinessTripRepository();
+            List<BusinessTrip> storedBts = businessTripRepo.GetPendingBTForManager(bt.Manager);
+            var storedBt = storedBts.First();
+            storedBt.Approve();
+
+            List<BusinessTrip> approvedBts = businessTripRepo.GetApprovedBTForEmployee(bt.Employee);
+            Assert.IsTrue(approvedBts.Any(b => b.ID == bt.ID));
+        }
+
+        [TestMethod]
+        public void ASendedBTCanBeCanceled()
+        {
+            var bt = SendABt();
+
+            BusinessTripRepository businessTripRepo = new BusinessTripRepository();
+            List<BusinessTrip> storedBts = businessTripRepo.GetPendingBTForManager(bt.Manager);
+            var storedBt = storedBts.First();
+            storedBt.Cancel();
+
+            List<BusinessTrip> approvedBts = businessTripRepo.GetCanceldBTForEmployee(bt.Employee);
+            Assert.IsTrue(approvedBts.Any(b => b.ID == bt.ID));
+        }
+
+        [TestMethod]
+        public void WhenBtIsSendedAnEmailIsSentToManager()
+        {
+            var bt = SendABt();
+            EmailServiceTest emailServiceTest = new EmailServiceTest();
+            Assert.IsTrue(EmailServiceTest.Emails.Any(e => e.To == bt.Manager.Email));
+        }
+
+
+        public void FillBT(BusinessTrip bt)
+        { 
+            bt.Departure = emp.Office.Location;
+            bt.Destination = new Location("X");
+            bt.StartingDate = new DateTime(2017,4,2);
+            bt.EndDate = new DateTime(2017, 4, 2);
+            bt.Phone = phone;
+            bt.BankCard = bankCard;
+            bt.MeanOfTransportation = "Bus";
         }
 
     }

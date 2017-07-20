@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kitty.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace Kitty
 {
     public class BusinessTrip
     {
-        STATES value = STATES.STATE_PENDING;
+        public Guid ID;
+        public STATES Status = STATES.STATE_NEW;
 
         public readonly Employee Employee;
         public Location Departure;
@@ -19,43 +21,62 @@ namespace Kitty
         public string BankCard;
         public bool AccommodationIsNeeded;
 
-        public enum STATES { STATE_START=0,STATE_CANCELED = 1, STATE_APPROVED = 2, STATE_PENDING = 3 }
+        public enum STATES { STATE_NEW=0, STATE_CANCELED = 1, STATE_APPROVED = 2, STATE_PENDING = 3 }
         public string MeanOfTransportation;
+
+        public Manager Manager;
         //public string OtherNeeds;
         public BusinessTrip()
         {
-
+            ID = Guid.NewGuid();
         }
 
         public BusinessTrip(Employee employee, Manager manager)
         {
+            ID = Guid.NewGuid();
             Departure = employee.Office.Location;
             Employee = employee;
+            Manager = manager;
         }
 
 
         public void Send()
         {
+            Status = STATES.STATE_PENDING;
 
-            Manager manager;
-            manager = this.Employee.Office.Manager;
-            manager.BTs.Add(this);
+            BusinessTripRepository bs = new BusinessTripRepository();
+            bs.Add(this);
+
+            SendEmailToManager();
         }
 
-        public STATES ChooseStatus(string STATUS)
+        private void SendEmailToManager()
         {
-            switch (STATUS)
-            {
-                case "APPROVED":
-                    value = STATES.STATE_APPROVED;
-                    break; 
+            IEmailService emailService = EmailServiceLocator.GetEmailService();
+            Email email = new Email();
+            email.From = Employee.Email;
+            email.To = Manager.Email;
+            email.Subject = "Please aprove my request";
 
-                case "CANCELED":
-                    value = STATES.STATE_CANCELED;
-                    break;                   
-            }
-            return value;
+            var body = string.Format("Employee: {0}\n", Employee.Name);
+            body += string.Format("Departure: {0}\n", Departure.Name);
+            body += string.Format("Destination: {0}\n", Destination.Name);
+            if (AccommodationIsNeeded)
+                body += string.Format("Accomodation is needed");
+            else
+                body += string.Format("Accomodation is not needed");
+
+            emailService.Send(email);
         }
 
+        public void Approve()
+        {
+            Status = STATES.STATE_APPROVED;
+        }
+
+        public void Cancel()
+        {
+            Status = STATES.STATE_CANCELED;
+        }
     }
 }

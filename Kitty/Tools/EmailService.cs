@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kitty
+namespace Kitty.Tools
 {
-    public class Manager : Employee
+    public class EmailService: IEmailService
     {
-        public Manager(string Name, string email) : base(Name, email)
+        public void Send(Email email)
         {
+
         }
+
     }
 }
-
