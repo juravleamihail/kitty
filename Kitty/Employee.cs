@@ -23,7 +23,10 @@ namespace Kitty
             return bt;
         }
 
-        public string ChooseCity()
+        
+
+
+     /*   public string ChooseCity()
         {
             string stringSwitch;
             string location = null;
@@ -48,6 +51,6 @@ namespace Kitty
                     break;
             }
             return location;
-        }
+        }*/
     }
 }

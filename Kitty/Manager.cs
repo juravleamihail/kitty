@@ -13,9 +13,6 @@ namespace Kitty
         public Manager(string Name, string email) : base(Name, email)
         {
         }
-
-        private void aproveBT()
-        { }
                 
         }
     }
