@@ -9,6 +9,12 @@ namespace Kitty
     public class Location
     {
         public string Name;
+
+        public Location()
+        {
+
+        }
+
         public Location(String name)
         {
             Name = name;

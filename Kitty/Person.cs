@@ -11,6 +11,11 @@ namespace Kitty
         protected string name;
         protected string mailAddress;
 
+        public Person()
+        {
+
+        }
+
         public Person(string name)
         {
             this.name = name;

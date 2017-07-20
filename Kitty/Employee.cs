@@ -10,7 +10,7 @@ namespace Kitty
     {
         public Manager Manager;
         public Office Office;
-
+        
         public Employee(string Name, string email):base(Name)
         {
             this.name = Name;
@@ -64,37 +64,5 @@ namespace Kitty
             }
             return location;
         }
-
-        public void ChangeDeparture()
-        {
-            string choose;
-            bool chooseDeparture;
-            string departure;
-            Console.WriteLine("You want to change your departure:y\n");
-            choose = Console.ReadLine();
-            switch (choose)
-            {
-                case "y":
-                    chooseDeparture = true;
-                    break;
-
-                default:
-                    chooseDeparture = false;
-                    break;
-            }
-
-            if (chooseDeparture)
-            {
-                Console.WriteLine("Choose your departure:");
-                departure = Console.ReadLine();
-                //location.Departure = departure;
-               // return departure;
-            }
-
-            
-              //  return location.Departure;
-
-        }
-
     }
 }

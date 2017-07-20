@@ -20,6 +20,10 @@ namespace Kitty
         enum STATES { STATE_CANCELED = 0, STATE_APPROVED = 1, STATE_PENDING = 2 }
         public string MeanOfTransportation;
         //public string OtherNeeds;
+        public BusinessTrip()
+        {
+
+        }
 
         public BusinessTrip(Employee employee, Manager manager)
         {
@@ -31,6 +35,9 @@ namespace Kitty
         public void Send()
         {
 
+            Manager manager;
+            manager = this.Employee.Office.Manager;
+            manager.BTs.Add(this);
         } 
     }
 }

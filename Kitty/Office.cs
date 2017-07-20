@@ -13,6 +13,11 @@ namespace Kitty
         private List<Employee> employees;
         public Location Location;
 
+        public Office()
+        {
+
+        }
+
         public Office(Manager manager,Location location)
         {
             Manager = manager;
