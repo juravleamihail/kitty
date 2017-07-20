@@ -8,6 +8,8 @@ namespace Kitty
 {
     public class BusinessTrip
     {
+        STATES value = STATES.STATE_PENDING;
+
         public readonly Employee Employee;
         public Location Departure;
         public Location Destination;
@@ -42,7 +44,6 @@ namespace Kitty
 
         public STATES ChooseStatus(string STATUS)
         {
-            STATES value=STATES.STATE_PENDING;
             switch (STATUS)
             {
                 case "APPROVED":
