@@ -17,7 +17,7 @@ namespace Kitty
         public string BankCard;
         public bool AccommodationIsNeeded;
 
-        enum STATES { STATE_CANCELED = 0, STATE_APPROVED = 1, STATE_PENDING = 2 }
+        public enum STATES { STATE_START=0,STATE_CANCELED = 1, STATE_APPROVED = 2, STATE_PENDING = 3 }
         public string MeanOfTransportation;
         //public string OtherNeeds;
         public BusinessTrip()
@@ -38,6 +38,23 @@ namespace Kitty
             Manager manager;
             manager = this.Employee.Office.Manager;
             manager.BTs.Add(this);
-        } 
+        }
+
+        public STATES ChooseStatus(string STATUS)
+        {
+            STATES value=STATES.STATE_PENDING;
+            switch (STATUS)
+            {
+                case "APPROVED":
+                    value = STATES.STATE_APPROVED;
+                    break; 
+
+                case "CANCELED":
+                    value = STATES.STATE_CANCELED;
+                    break;                   
+            }
+            return value;
+        }
+
     }
 }
