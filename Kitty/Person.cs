@@ -40,6 +40,11 @@ namespace Kitty
                 mailAddress = value;
             }
         }
-        
+
+        public void SetPassword(string password)
+        {
+            this.password = password;
+        }
+
     }
 }

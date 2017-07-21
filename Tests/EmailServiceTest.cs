@@ -11,7 +11,7 @@ namespace Tests
     {
         public static List<Email> Emails = new List<Email>();
 
-        public void Send(Email email)
+        public void Send(Email email, string password)
         {
             Emails.Add(email);
         }

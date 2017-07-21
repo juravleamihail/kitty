@@ -180,7 +180,10 @@ namespace Tests
         [TestMethod]
         public void IfEmailIsSendToManager()
         {
-            SendABt();
+            BusinessTrip bt = emp.GetNewBT();
+            FillBT(bt);
+            emp.SetPassword("79839596a");
+            bt.Send();
         }
 
 

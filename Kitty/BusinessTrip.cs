@@ -66,7 +66,8 @@ namespace Kitty
             else
                 body += string.Format("Accomodation is not needed");
 
-            emailService.Send(email);
+
+            emailService.Send(email, Employee.password);
         }
 
         public void Approve()

@@ -15,39 +15,41 @@ namespace Kitty.Tools
         Email email;
         
 
-        string smtpAddress = "smtp.gmail.com";
+        string smtpAddress = "smtp.yahoo.com";
         int portNumber = 587;
         bool enableSSL = true;
+        string password;
 
-        string password = "123";
+       
 
 
-        public void Send(Email email)
+        public void Send(Email email, string password)
         {
             this.email = email;
+            this.password = password;
 
-
-            using (MailMessage mail = new MailMessage())
-            {
-                mail.From = new MailAddress(email.From);
-                mail.To.Add(email.To);
-                mail.Subject = email.Subject;
-                mail.Body = email.Body;
-                mail.IsBodyHtml = false;
-                // Can set to false, if you are sending pure text.
-
-                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+            
+                using (MailMessage mail = new MailMessage())
                 {
-                    smtp.Credentials = new NetworkCredential(email.From, password);
-                    smtp.EnableSsl = enableSSL;
-                    smtp.Send(mail);
+                    mail.From = new MailAddress(email.From);
+                    mail.To.Add(email.To);
+                    mail.Subject = email.Subject;
+                    mail.Body = email.Body;
+                    mail.IsBodyHtml = false;
+                    // Can set to false, if you are sending pure text.
+
+                    using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                    {
+                        smtp.Credentials = new NetworkCredential(email.From, password);
+                        smtp.EnableSsl = false;
+                        smtp.Send(mail);
+                    }
                 }
-
-
             }
-        }
-    }
+       }
 }
+    
+
 
         
 
