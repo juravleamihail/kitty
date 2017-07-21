@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Mail;
 
+using System.Web;
+using System.Net.Mail;
+
+
 namespace Kitty.Tools
 {
     public class EmailService : IEmailService

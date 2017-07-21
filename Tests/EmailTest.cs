@@ -14,20 +14,6 @@ namespace Tests
         
 
 
-        [TestInitialize]
-        public void EmailIsSending()
-        {
-            Email email = new Email();
-            Employee
-            EmailService emailService = new EmailService();
-            email.From = "the_mihail@yahoo.com";
-            email.To = "juravleamihail@yahoo.com";
-            email.Subject = "Sal koae";
-            email.Body = "Cmf???Am imeilu meu";
-
-            emailService.Send(email);
-
-            
-        }
+   
     }
 }
