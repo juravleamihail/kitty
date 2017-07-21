@@ -177,7 +177,6 @@ namespace Tests
             Assert.IsTrue(EmailServiceTest.Emails.Any(e => e.To == bt.Manager.Email));
         }
 
-
         public void FillBT(BusinessTrip bt)
         { 
             bt.Departure = emp.Office.Location;
@@ -189,5 +188,11 @@ namespace Tests
             bt.MeanOfTransportation = "Bus";
         }
 
+        [TestMethod]
+        public void EmailIsSendToManager()
+        {
+            BusinessTrip bt = emp.GetNewBT();
+            FillBT(bt);
+        }
     }
 }

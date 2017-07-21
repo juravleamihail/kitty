@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="BusinessTripTests.cs" />
     <Compile Include="EmailServiceTest.cs" />
+    <Compile Include="EmailTest.cs" />
     <Compile Include="EmployeeTest.cs" />
     <Compile Include="OfficeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

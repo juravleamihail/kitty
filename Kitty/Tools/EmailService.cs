@@ -8,7 +8,7 @@ using System.Net.Mail;
 
 namespace Kitty.Tools
 {
-    public class EmailService: IEmailService
+    public class EmailService : IEmailService
     {
         Email email;
 
@@ -35,7 +35,7 @@ namespace Kitty.Tools
 
                 using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
                 {
-                    //smtp.Credentials = new NetworkCredential(email.From, password);
+                    smtp.Credentials = new NetworkCredential(email.From, email.password);
                     smtp.EnableSsl = enableSSL;
                     smtp.Send(mail);
                 }
@@ -44,4 +44,5 @@ namespace Kitty.Tools
             }
 
         }
+    }
 }
