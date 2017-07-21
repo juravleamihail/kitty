@@ -10,13 +10,16 @@ namespace Kitty.Tools
 {
     public class EmailService : IEmailService
     {
+        BusinessTrip bt;
+        Employee emp;
         Email email;
+        
 
         string smtpAddress = "smtp.gmail.com";
         int portNumber = 587;
         bool enableSSL = true;
 
-
+        string password = "123";
 
 
         public void Send(Email email)
@@ -42,7 +45,9 @@ namespace Kitty.Tools
 
 
             }
-
         }
     }
 }
+
+        
+

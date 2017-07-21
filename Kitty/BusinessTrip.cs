@@ -52,7 +52,7 @@ namespace Kitty
 
         private void SendEmailToManager()
         {
-            IEmailService emailService = EmailServiceLocator.GetEmailService();
+            EmailService emailService = new EmailService();
             Email email = new Email();
             email.From = Employee.Email;
             email.To = Manager.Email;

@@ -26,11 +26,11 @@ namespace Tests
         [TestInitialize]
         public void Setup()
         {
-            manager = new Manager("boss", "fara");
-            Location location = new Location("Brasov");
+            manager = new Manager("Mihail", "the_mihail@yahoo.com");
+            Location location = new Location("BT");
 
             var office = new Office(manager, location);
-            emp = office.CreateEmployee("gigel", "non");
+            emp = office.CreateEmployee("Valentin", "cristian.ursache96@yahoo.com");
 
             startingDate=new DateTime(2008, 04, 14);
             endDate = new DateTime(2008, 04, 30);
@@ -177,6 +177,13 @@ namespace Tests
             Assert.IsTrue(EmailServiceTest.Emails.Any(e => e.To == bt.Manager.Email));
         }
 
+        [TestMethod]
+        public void IfEmailIsSendToManager()
+        {
+            SendABt();
+        }
+
+
         public void FillBT(BusinessTrip bt)
         { 
             bt.Departure = emp.Office.Location;
@@ -188,11 +195,5 @@ namespace Tests
             bt.MeanOfTransportation = "Bus";
         }
 
-        [TestMethod]
-        public void EmailIsSendToManager()
-        {
-            BusinessTrip bt = emp.GetNewBT();
-            FillBT(bt);
-        }
     }
 }
