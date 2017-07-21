@@ -10,6 +10,7 @@ namespace Kitty
     {
         protected string name;
         protected string mailAddress;
+        public string password;
 
         public Person()
         {

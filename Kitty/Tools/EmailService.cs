@@ -8,15 +8,18 @@ using System.Net.Mail;
 
 namespace Kitty.Tools
 {
-    public class EmailService: IEmailService
+    public class EmailService : IEmailService
     {
+        BusinessTrip bt;
+        Employee emp;
         Email email;
+        
 
         string smtpAddress = "smtp.gmail.com";
         int portNumber = 587;
         bool enableSSL = true;
 
-
+        string password = "123";
 
 
         public void Send(Email email)
@@ -35,13 +38,16 @@ namespace Kitty.Tools
 
                 using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
                 {
-                    //smtp.Credentials = new NetworkCredential(email.From, password);
+                    smtp.Credentials = new NetworkCredential(email.From, password);
                     smtp.EnableSsl = enableSSL;
                     smtp.Send(mail);
                 }
 
 
             }
-
         }
+    }
 }
+
+        
+
