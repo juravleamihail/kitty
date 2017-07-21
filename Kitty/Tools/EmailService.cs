@@ -38,18 +38,18 @@ namespace Kitty.Tools
                     mail.IsBodyHtml = false;
                     // Can set to false, if you are sending pure text.
 
-                    using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
-                    {
-                        smtp.Credentials = new NetworkCredential(email.From, password);
-                        smtp.EnableSsl = false;
-                        smtp.Send(mail);
-                    }
+                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                {
+                    smtp.Credentials = new NetworkCredential(email.From, password);
+                    smtp.EnableSsl = enableSSL;
+                    smtp.Send(mail);
                 }
-            }
-       }
-}
-    
 
+
+            }
+        }
+    }
+}
 
         
 
