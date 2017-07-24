@@ -11,13 +11,7 @@ namespace Kitty
     {
         static void Main(string[] args)
         {
-            EmailService imeil = new EmailService();
-            Email email = new Email();
-            imeil.Send(email);
-           
-
-           
-
+          
         }
     }
 }

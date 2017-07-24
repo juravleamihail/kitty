@@ -26,11 +26,11 @@ namespace Tests
         [TestInitialize]
         public void Setup()
         {
-            manager = new Manager("Mihail", "the_mihail@yahoo.com");
+            manager = new Manager("Mihail", "testiq9999@gmail.com");
             Location location = new Location("BT");
 
             var office = new Office(manager, location);
-            emp = office.CreateEmployee("Valentin", "cristian.ursache96@yahoo.com");
+            emp = office.CreateEmployee("Valentin", "iquesttestemployee@gmail.com");
 
             startingDate=new DateTime(2008, 04, 14);
             endDate = new DateTime(2008, 04, 30);
@@ -182,7 +182,7 @@ namespace Tests
         {
             BusinessTrip bt = emp.GetNewBT();
             FillBT(bt);
-            emp.SetPassword("79839596a");
+            emp.SetPassword("iquest1234");
             bt.Send();
         }
 

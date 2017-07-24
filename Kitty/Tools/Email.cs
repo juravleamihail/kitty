@@ -12,6 +12,5 @@ namespace Kitty.Tools
         public string To;
         public string Subject;
         public string Body;
-        public string password;
     }
 }
