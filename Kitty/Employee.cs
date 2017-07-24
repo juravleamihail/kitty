@@ -10,7 +10,7 @@ namespace Kitty
     {
         public Manager Manager;
         public Office Office;
-
+        
         public Employee(string Name, string email):base(Name)
         {
             this.name = Name;
@@ -23,22 +23,8 @@ namespace Kitty
             return bt;
         }
 
-        public BusinessTrip fillBT(Location destination, DateTime startDate, DateTime endDate, string phone, string bankCard, bool accomodation, string meaningOfTranspartion)
-        {
-            BusinessTrip bt = GetNewBT();
-            bt.Departure = this.Office.Location;
-            bt.Destination = destination;
-            bt.StartingDate = startDate;
-            bt.EndDate = endDate;
-            bt.Phone = phone;
-            bt.BankCard = bankCard;
-            bt.AccommodationIsNeeded = accomodation;
-            bt.MeanOfTransportation = meaningOfTranspartion;
-            return bt;
-        }
 
-
-        public string ChooseCity()
+     /*   public string ChooseCity()
         {
             string stringSwitch;
             string location = null;
@@ -63,38 +49,6 @@ namespace Kitty
                     break;
             }
             return location;
-        }
-
-        public void ChangeDeparture()
-        {
-            string choose;
-            bool chooseDeparture;
-            string departure;
-            Console.WriteLine("You want to change your departure:y\n");
-            choose = Console.ReadLine();
-            switch (choose)
-            {
-                case "y":
-                    chooseDeparture = true;
-                    break;
-
-                default:
-                    chooseDeparture = false;
-                    break;
-            }
-
-            if (chooseDeparture)
-            {
-                Console.WriteLine("Choose your departure:");
-                departure = Console.ReadLine();
-                //location.Departure = departure;
-               // return departure;
-            }
-
-            
-              //  return location.Departure;
-
-        }
-
+        }*/
     }
 }
