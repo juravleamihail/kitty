@@ -93,6 +93,7 @@ namespace Kitty
             email.To = Employee.Email;
             email.Subject = "Your request is approved";
             email.Body = FormBody();
+            emailService.Send(email, Employee.Manager.password);
 
         }
 
@@ -105,6 +106,7 @@ namespace Kitty
             email.To = Employee.Email;
             email.Subject = "Your request is canceled";
             email.Body = FormBody();
+            emailService.Send(email, Employee.Manager.password);
         }
     }
 }

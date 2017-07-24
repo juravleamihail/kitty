@@ -186,14 +186,23 @@ namespace Tests
             bt.Send();
         }
         [TestMethod]
-        public void IfApprovedOrCanceledRequestIsSentToEmployee()
+        public void IfApprovedIsSentToEmployee()
         {
             BusinessTrip bt = emp.GetNewBT();
             FillBT(bt);
             manager.SetPassword("testiq123");
-            bt.Approve();
+            bt.Approve(); 
+        }
+
+        [TestMethod]
+        public void IfCanceledRequestIsSentToEmployee()
+        {
+            BusinessTrip bt = emp.GetNewBT();
+            FillBT(bt);manager.SetPassword("t
+            estiq123");
             bt.Cancel();
         }
+
 
 
         public void FillBT(BusinessTrip bt)
