@@ -185,6 +185,15 @@ namespace Tests
             emp.SetPassword("iquest1234");
             bt.Send();
         }
+        [TestMethod]
+        public void IfApprovedOrCanceledRequestIsSentToEmployee()
+        {
+            BusinessTrip bt = emp.GetNewBT();
+            FillBT(bt);
+            manager.SetPassword("testiq123");
+            bt.Approve();
+            bt.Cancel();
+        }
 
 
         public void FillBT(BusinessTrip bt)
