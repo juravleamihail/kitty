@@ -198,8 +198,8 @@ namespace Tests
         public void IfCanceledRequestIsSentToEmployee()
         {
             BusinessTrip bt = emp.GetNewBT();
-            FillBT(bt);manager.SetPassword("t
-            estiq123");
+            FillBT(bt);
+            manager.SetPassword("testiq123");
             bt.Cancel();
         }
 
