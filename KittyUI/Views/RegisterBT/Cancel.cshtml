@@ -1,0 +1,15 @@
+﻿@using Kitty
+@model BusinessTrip
+@{
+    ViewBag.Title = "Cancel";
+}
+
+@if (Model.Status == BusinessTrip.STATES.STATE_CANCELED)
+{
+    <h2>The business trip was canceled</h2>
+}
+else
+{
+    <h2>The business trip was not canceled. Please try again!!!!</h2>
+    <h2>The current state is @Model.Status</h2>
+}

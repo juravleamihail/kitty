@@ -15,6 +15,11 @@ namespace Kitty
             businessTrips = new List<BusinessTrip>();
         }
 
+        public void CleanUp()
+        {
+            businessTrips = new List<BusinessTrip>();
+        }
+
         public void Add(BusinessTrip bt)
         {
             businessTrips.Add(bt);
@@ -23,6 +28,11 @@ namespace Kitty
         public IEnumerable<BusinessTrip> GetAllBts()
         {
             return businessTrips;
+        }
+
+        public BusinessTrip GetBtById(Guid ID)
+        {
+            return businessTrips.FirstOrDefault<BusinessTrip>(bt=>bt.ID == ID);
         }
 
         public List<BusinessTrip> GetPendingBTForManager(Manager manager)

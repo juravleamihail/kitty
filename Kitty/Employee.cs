@@ -10,7 +10,12 @@ namespace Kitty
     {
         public Manager Manager;
         public Office Office;
-        
+
+        public Employee():base()
+        {
+
+        }
+
         public Employee(string Name, string email):base(Name)
         {
             this.name = Name;
