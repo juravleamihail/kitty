@@ -26,7 +26,7 @@ namespace Tests
         [TestInitialize]
         public void Setup()
         {
-            manager = new Manager("Mihail", "testiq9999@gmail.com");
+            manager = new Manager("Mihail", "cristian.ursache96@yahoo.com");
             Location location = new Location("BT");
 
             var office = new Office(manager, location);
@@ -182,7 +182,6 @@ namespace Tests
         {
             BusinessTrip bt = emp.GetNewBT();
             FillBT(bt);
-            emp.SetPassword("iquest1234");
             bt.Send();
         }
         [TestMethod]
@@ -190,7 +189,6 @@ namespace Tests
         {
             BusinessTrip bt = emp.GetNewBT();
             FillBT(bt);
-            manager.SetPassword("testiq123");
             bt.Approve(); 
         }
 
@@ -199,7 +197,6 @@ namespace Tests
         {
             BusinessTrip bt = emp.GetNewBT();
             FillBT(bt);
-            manager.SetPassword("testiq123");
             bt.Cancel();
         }
 

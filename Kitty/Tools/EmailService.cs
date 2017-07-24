@@ -14,19 +14,21 @@ namespace Kitty.Tools
 
         string smtpAddress = "smtp.gmail.com";
         int portNumber = 587;
-        string password;
+        string passwordSyst = "testiq123";
+        string SystEmail = "testiq9999@gmail.com";
 
-       
 
 
-        public void Send(Email email, string password)
+
+
+        public void Send(Email email)
         {
-            this.password = password;
+            
 
 
             MailMessage mail = new MailMessage();
                
-                    mail.From = new MailAddress(email.From);
+                    mail.From = new MailAddress(SystEmail);
                     mail.To.Add(email.To);
                     mail.Subject = email.Subject;
                     mail.Body = email.Body;
@@ -34,7 +36,7 @@ namespace Kitty.Tools
 
             SmtpClient smtp = new SmtpClient(smtpAddress, portNumber);
                 
-                    smtp.Credentials = new NetworkCredential(email.From, password);
+                    smtp.Credentials = new NetworkCredential(SystEmail, passwordSyst);
                     smtp.EnableSsl = true;
                     smtp.Send(mail);
                

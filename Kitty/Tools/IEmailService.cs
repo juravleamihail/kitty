@@ -8,6 +8,6 @@ namespace Kitty.Tools
 {
     public interface IEmailService
     {
-        void Send(Email email, string password);
+        void Send(Email email);
     }
 }
