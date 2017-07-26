@@ -27,5 +27,6 @@ namespace Kitty
             var bt = new BusinessTrip(this, Manager);
             return bt;
         }
+
     }
 }

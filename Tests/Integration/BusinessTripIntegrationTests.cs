@@ -30,7 +30,7 @@ namespace Tests.Integration
             Location location = new Location("BT");
 
             var office = new Office(manager, location);
-            emp = office.CreateEmployee("Valentin", "iquesttestemployee@gmail.com");
+            emp = office.CreateEmployee("Valentin", "iquest9999@gmail.com");
 
             startingDate = new DateTime(2008, 04, 14);
             endDate = new DateTime(2008, 04, 30);
