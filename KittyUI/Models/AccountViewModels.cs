@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Kitty;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace KittyUI.Models
@@ -62,12 +63,40 @@ namespace KittyUI.Models
         public bool RememberMe { get; set; }
     }
 
+
+
     public class RegisterViewModel
     {
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 2)]
+        [Display(Name = "Name")]
+        public string Username { get; set;}
+
+        [Required]
+        [Display(Name = "Location")]
+        public string location { get; set; }
+
+ 
+
+
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 5)]
+        [DataType(DataType.PhoneNumber)]
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 12)]
+        [DataType(DataType.CreditCard)]
+        [Display(Name = "Bank Card")]
+        public string BankCard { get; set; }
+
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]

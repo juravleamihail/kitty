@@ -26,7 +26,7 @@ namespace Tests.Integration
         [TestInitialize]
         public void Setup()
         {
-            manager = new Manager("Mihail", "cristian.ursache96@yahoo.com");
+            manager = new Manager("Mihail", "testiq9999@gmail.com");
             Location location = new Location("BT");
 
             var office = new Office(manager, location);

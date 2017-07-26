@@ -18,11 +18,11 @@ namespace KittyUI.Controllers
 
         public ActionResult CreateBT()
         {
-            var manager = new Manager("Mihail", "cristian.ursache96@yahoo.com");
+            var manager = new Manager("Mihail", "the_mihail@yahoo.com");
             Location location = new Location("Sibiu");
 
             var office = new Office(manager, location);
-            var emp = office.CreateEmployee("Valentin", "iquesttestemployee@gmail.com");
+            var emp = office.CreateEmployee("Valentin", "testiq9999@gmail.com");
             var bt = emp.GetNewBT();
             bt.Destination = new Location("Brasov");
             ViewBag.BtID = bt.ID;
