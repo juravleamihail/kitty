@@ -24,7 +24,6 @@ namespace Kitty.Tools
             mail.Subject = email.Subject;
             mail.IsBodyHtml = true;
             mail.Body = email.Body;
-            // Can set to false, if you are sending pure text.
 
             SmtpClient smtp = new SmtpClient(smtpAddress, portNumber);
 
