@@ -105,5 +105,7 @@ namespace Kitty
             email.Body = btf.GetBody(this);
             emailService.Send(email);
         }
+
+
     }
 }
