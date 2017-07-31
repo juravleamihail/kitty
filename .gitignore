@@ -5,8 +5,16 @@
 /Kitty/bin
 /Kitty/obj
 /Kitty/packages
+/KittyUI/App_Data
+/KittyUI/bin
+/KittyUI/obj
+/KittyUI/packages
+/KittyWfUI/obj
+/KittyWfUI/App_Data
+/KittyWfUI/bin
+/KittyWfUI/obj
+/KittyWfUI/packages
 /Tests/bin
 /Tests/obj
 /Tests/packages
-
 *.suo
