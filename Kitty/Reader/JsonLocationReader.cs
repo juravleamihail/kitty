@@ -16,7 +16,7 @@ namespace Kitty.Reader
         public static IEnumerable<string> Cities()
         {
 
-             List<string> cities;
+            // List<string> cities;
              string json = string.Empty;
 
             using (StreamReader r = new StreamReader("C:\\Users\\iquest\\Source\\Repos\\kitty\\kitty\\Kitty\\countriesToCities.json"))
