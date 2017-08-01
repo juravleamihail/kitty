@@ -3843,7 +3843,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #428bca;
+  border-color: white;
 }
 
 .nav .nav-divider {
@@ -3874,7 +3874,17 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
+  border-color:.navbar-inverse {
+    background-color: none;
+   
+    
+    
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color:none;
+
+}e #dddddd;
 }
 
 .nav-tabs > li.active > a,
@@ -3882,7 +3892,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a:focus {
   color: #555555;
   cursor: default;
-  background-color: #ffffff;
+  background-color: none;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
 }
@@ -3932,7 +3942,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #428bca;
+  background-color: none;
 }
 
 .nav-stacked > li {
@@ -4060,6 +4070,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-header:after {
   display: table;
   content: " ";
+  text-align:center;
 }
 
 .navbar-header:after {

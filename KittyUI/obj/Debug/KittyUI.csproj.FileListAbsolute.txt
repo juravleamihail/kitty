@@ -77,6 +77,6 @@ C:\Users\iquest\Source\Repos\kitty9\KittyUI\bin\Microsoft.Owin.Security.OAuth.xm
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\iquest\Source\Repos\kitty9\KittyUI\obj\Debug\KittyUI.csprojResolveAssemblyReference.cache
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\obj\Debug\KittyUI.dll
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\obj\Debug\KittyUI.pdb
+C:\Users\iquest\Source\Repos\kitty9\KittyUI\obj\Debug\KittyUI.csprojResolveAssemblyReference.cache
