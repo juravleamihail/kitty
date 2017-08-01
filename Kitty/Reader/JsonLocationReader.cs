@@ -13,11 +13,11 @@ namespace Kitty.Reader
     {
         //private static List<Location> locations;
 
-        public static string ReadJsonFile()
-
+        public static IEnumerable<string> Cities()
         {
 
-            string json = string.Empty;
+             List<string> cities;
+             string json = string.Empty;
 
             using (StreamReader r = new StreamReader("C:\\Users\\iquest\\Source\\Repos\\kitty\\kitty\\Kitty\\countriesToCities.json"))
 
@@ -27,21 +27,13 @@ namespace Kitty.Reader
 
                 dynamic array = JsonConvert.DeserializeObject(json);
 
-            }
-
-            return json;
+                foreach (string city in array.Romania)
+                {
+                    yield return city;
+                }
+            }         
 
         }
 
-        public static string[] SplitCities(string input)
-        {
-            string[] result = null;
-
-            char[] delimiterChars = { ' ', '"', '{', '}', ',', '/', '\\', '.', ':', '[', ']', '\t' };
-            result = input.Split(delimiterChars, StringSplitOptions.RemoveEmptyEntries);
-          
-
-            return result;
-        }
     }
 }

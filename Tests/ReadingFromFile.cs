@@ -3,7 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Kitty.Reader;
 using Kitty;
 using System.Data.Entity;
-
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Tests
 {
@@ -14,19 +15,10 @@ namespace Tests
         [TestMethod]
         public void CanReadFromJsonFile()
         {
-            string locations = null;
-            locations = JsonLocationReader.ReadJsonFile();
+            IEnumerable<string> locations = null;
+            locations = JsonLocationReader.Cities();
             Assert.IsNotNull(locations);
+            Assert.IsTrue(locations.Count()>0);
         }
-
-        [TestMethod]
-        public void CanSplitStrigInCities()
-        {
-            string locations = JsonLocationReader.ReadJsonFile();
-            string[] cities = JsonLocationReader.SplitCities(locations);
-            Assert.IsNotNull(cities);
-
-        }
-
     }
 }
