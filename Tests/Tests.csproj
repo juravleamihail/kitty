@@ -92,7 +92,7 @@
   <ItemGroup>
     <Compile Include="BusinessTripFormatterTest.cs" />
     <Compile Include="BusinessTripTests.cs" />
-    <Compile Include="DbTests.cs" />
+    <Compile Include="DbTests\DbTests.cs" />
     <Compile Include="EmailServiceTest.cs" />
     <Compile Include="EmailTest.cs" />
     <Compile Include="EmployeeTest.cs" />

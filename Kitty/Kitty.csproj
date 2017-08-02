@@ -106,8 +106,10 @@
     <Compile Include="BusinessTrip.cs" />
     <Compile Include="BusinessTripRepository.cs" />
     <Compile Include="DB\BussinesTripDbContext.cs" />
+    <Compile Include="DB\ManagerDbContext.cs" />
     <Compile Include="DB\EmployeeDbContext.cs" />
     <Compile Include="DB\LocationDbContext.cs" />
+    <Compile Include="DB\OfficeDbContext.cs" />
     <Compile Include="Reader\JsonLocationReader.cs" />
     <Compile Include="Tools\BusinessTripFormatterServiceLocator.cs" />
     <Compile Include="Tools\Email.cs" />
