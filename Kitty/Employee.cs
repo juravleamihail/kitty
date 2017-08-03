@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,9 @@ namespace Kitty
 {
     public class Employee : Person
     {
+        [Column("Manager")]
         public Manager Manager;
+        [Column("Office")]
         public Office Office;
 
         public Employee():base()
@@ -27,6 +30,6 @@ namespace Kitty
             var bt = new BusinessTrip(this, Manager);
             return bt;
         }
-
+        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Kitty.Tools;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace Kitty
 {
     public class BusinessTrip
     {
+        [Key]
         public Guid ID;
         public STATES Status = STATES.STATE_NEW;
 
@@ -58,8 +60,8 @@ namespace Kitty
         {
             IEmailService emailService = EmailServiceLocator.GetEmailService();
             Email email = new Email();
-            email.From = Employee.Email;
-            email.To = Manager.Email;
+            email.From = Employee.mailAddress;
+            email.To = Manager.mailAddress;
             email.Subject = "Please aprove my request";
             IBusinessTripFormatter btf = BusinessTripFormatterServiceLocator.GetFormatter();
             email.Body = btf.GetBody(this); 
@@ -80,8 +82,8 @@ namespace Kitty
             Status = STATES.STATE_APPROVED;
             IEmailService emailService = EmailServiceLocator.GetEmailService();
             Email email = new Email();
-            email.From = Manager.Email;
-            email.To = Employee.Email;
+            email.From = Manager.mailAddress;
+            email.To = Employee.mailAddress;
             email.Subject = "Your request is approved";
             IBusinessTripFormatter btf = BusinessTripFormatterServiceLocator.GetFormatter();
             email.Body = btf.GetBody(this);
@@ -98,8 +100,8 @@ namespace Kitty
             Status = STATES.STATE_CANCELED;
             IEmailService emailService = EmailServiceLocator.GetEmailService();
             Email email = new Email();
-            email.From = Manager.Email;
-            email.To = Employee.Email;
+            email.From = Manager.mailAddress;
+            email.To = Employee.mailAddress;
             email.Subject = "Your request is canceled";
             IBusinessTripFormatter btf = BusinessTripFormatterServiceLocator.GetFormatter();
             email.Body = btf.GetBody(this);

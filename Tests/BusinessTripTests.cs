@@ -173,7 +173,7 @@ namespace Tests
         {
             var bt = SendABt();
             EmailServiceTest emailServiceTest = new EmailServiceTest();
-            Assert.IsTrue(EmailServiceTest.Emails.Any(e => e.To == bt.Manager.Email));
+            Assert.IsTrue(EmailServiceTest.Emails.Any(e => e.To == bt.Manager.mailAddress));
         }
 
         [TestMethod]
