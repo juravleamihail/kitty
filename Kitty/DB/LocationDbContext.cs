@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Kitty.DB
 {
-    class LocationDbContext : DbContext
+ public   class LocationDbContext : DbContext
     {
         public DbSet<Location> locations { get; set; }
 
         public LocationDbContext():base("DefaultConnection")
         {
-            JsonLocationReader.Cities();
+
         }
     }
 }

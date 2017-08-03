@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,12 @@ namespace Kitty
 {
     abstract public class Person
     {
+        [Column("Name")]
         protected string name { get; set; }
 
         [Key]
+        public int Id { get; set;}
+    
         public string mailAddress { get; set; }
 
         public Person()
@@ -23,7 +27,7 @@ namespace Kitty
         {
             this.name = name;
         }
-        //aa
+        
         public string Name
         {
             get {
@@ -31,16 +35,6 @@ namespace Kitty
             }
         }
 
-        public string Email
-        {
-            get
-            {
-                return mailAddress;
-            }
-            set
-            {
-                mailAddress = value;
-            }
-        }
+       
     }
 }

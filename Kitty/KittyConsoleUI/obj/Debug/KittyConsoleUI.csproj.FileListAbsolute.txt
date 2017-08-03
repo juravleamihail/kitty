@@ -1,7 +1,0 @@
-C:\Users\iquest\Source\Repos\kitty3\Kitty\KittyConsoleUI\bin\Debug\KittyConsoleUI.exe.config
-C:\Users\iquest\Source\Repos\kitty3\Kitty\KittyConsoleUI\bin\Debug\KittyConsoleUI.exe
-C:\Users\iquest\Source\Repos\kitty3\Kitty\KittyConsoleUI\bin\Debug\KittyConsoleUI.pdb
-C:\Users\iquest\Source\Repos\kitty3\Kitty\KittyConsoleUI\bin\Debug\Kitty.exe
-C:\Users\iquest\Source\Repos\kitty3\Kitty\KittyConsoleUI\bin\Debug\Kitty.pdb
-C:\Users\iquest\Source\Repos\kitty3\Kitty\KittyConsoleUI\obj\Debug\KittyConsoleUI.exe
-C:\Users\iquest\Source\Repos\kitty3\Kitty\KittyConsoleUI\obj\Debug\KittyConsoleUI.pdb

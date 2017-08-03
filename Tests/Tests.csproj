@@ -44,7 +44,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\Kitty\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+      <HintPath>..\KittyUI\packages\EntityFramework.SqlServerCompact.6.1.3\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="JY.Owin.Security.Yahoo, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -92,7 +92,7 @@
   <ItemGroup>
     <Compile Include="BusinessTripFormatterTest.cs" />
     <Compile Include="BusinessTripTests.cs" />
-    <Compile Include="DbTests.cs" />
+    <Compile Include="DbTests\DbTests.cs" />
     <Compile Include="EmailServiceTest.cs" />
     <Compile Include="EmailTest.cs" />
     <Compile Include="EmployeeTest.cs" />

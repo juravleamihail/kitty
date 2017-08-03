@@ -18,3 +18,5 @@
 /Tests/obj
 /Tests/packages
 *.suo
+/Kitty/KittyConsoleUI/bin/Debug
+/Kitty/KittyConsoleUI/obj/Debug
