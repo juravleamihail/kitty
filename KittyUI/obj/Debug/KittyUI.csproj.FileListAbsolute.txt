@@ -80,3 +80,5 @@ C:\Users\iquest\Source\Repos\kitty9\KittyUI\bin\Microsoft.Owin.Security.Microsof
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\obj\Debug\KittyUI.dll
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\obj\Debug\KittyUI.pdb
 C:\Users\iquest\Source\Repos\kitty9\KittyUI\obj\Debug\KittyUI.csprojResolveAssemblyReference.cache
+C:\Users\iquest\Source\Repos\kitty9\KittyUI\bin\Kitty.dll
+C:\Users\iquest\Source\Repos\kitty9\KittyUI\bin\Kitty.pdb
