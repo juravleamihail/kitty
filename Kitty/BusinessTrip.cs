@@ -11,26 +11,27 @@ namespace Kitty
     public class BusinessTrip
     {
         [Key]
-        public Guid ID;
-        public STATES Status = STATES.STATE_NEW;
+        public Guid ID { get; set; }
+        public STATES Status  { get; set; }
 
-        public readonly Employee Employee;
-        public Location Departure;
-        public Location Destination;
-        public DateTime StartingDate;
-        public DateTime EndDate;
-        public string Phone;
-        public string BankCard;
-        public bool AccommodationIsNeeded;
+        public Employee Employee { get; set; }
+        public Location Departure { get; set; }
+        public Location Destination { get; set; }
+        public DateTime StartingDate { get; set; }
+        public DateTime EndDate { get; set; }
+        public string Phone { get; set; }
+        public string BankCard { get; set; }
+        public bool AccommodationIsNeeded { get; set; }
 
         public enum STATES { STATE_NEW=0, STATE_CANCELED = 1, STATE_APPROVED = 2, STATE_PENDING = 3 }
-        public string MeanOfTransportation;
+        public string MeanOfTransportation { get; set; }
 
-        public Manager Manager;
+        public Manager Manager { get; set; }
         //public string OtherNeeds;
         public BusinessTrip()
         {
             ID = Guid.NewGuid();
+            Status = STATES.STATE_NEW;
         }
 
         public BusinessTrip(Employee employee, Manager manager)
