@@ -20,7 +20,6 @@ namespace Kitty.Reader
              string json = string.Empty;
 
             using (StreamReader r = new StreamReader("C:\\Users\\iquest\\Source\\Repos\\kitty\\kitty\\Kitty\\countriesToCities.json"))
-
             {
 
                 json = r.ReadToEnd();
