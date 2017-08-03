@@ -1,0 +1,17 @@
+﻿@using Kitty
+@model BusinessTrip
+@{
+    ViewBag.Title = "Approve";
+}
+
+@if (Model.Status == BusinessTrip.STATES.STATE_APPROVED)
+{
+    <h2>The business trip was approved</h2>
+}
+else
+{
+    <h2>The business trip was not approved. Please try again!!!!</h2>
+    <h2>The current state is @Model.Status</h2>
+}
+
+

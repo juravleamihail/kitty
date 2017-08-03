@@ -12,7 +12,7 @@ namespace Kitty.Tools
 
         static EmailServiceLocator()
         {
-            EmailService = new EmailService();
+            EmailService = new GmailEmailService();
         }
 
         public static void SetEmailService(IEmailService emailService)

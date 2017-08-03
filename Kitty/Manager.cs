@@ -8,6 +8,10 @@ namespace Kitty
 {
     public class Manager : Employee
     {
+        public Manager() : base()
+        {
+
+        }
         public Manager(string Name, string email) : base(Name, email)
         {
         }

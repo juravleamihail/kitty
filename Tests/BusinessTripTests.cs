@@ -18,8 +18,6 @@ namespace Tests
         private Location location;
         private DateTime startingDate;
         private DateTime endDate;
-        private string phone;
-        private string bankCard;
         private string meaningOfTransportation;
         private bool AccommodationIsNeeded;
 
@@ -34,12 +32,13 @@ namespace Tests
 
             startingDate=new DateTime(2008, 04, 14);
             endDate = new DateTime(2008, 04, 30);
-            phone = "112";
-            bankCard = "1502 4023 3453 3252";
+            
             meaningOfTransportation = "bmw";
             AccommodationIsNeeded = true;
-
+            BusinessTripRepository businessTripRepo = new BusinessTripRepository();
+            businessTripRepo.CleanUp();
             EmailServiceLocator.SetEmailService(new EmailServiceTest());
+            BusinessTripFormatterServiceLocator.SetFormatter(new BusinessTripFormatterTest());
 
         }
 
@@ -202,14 +201,13 @@ namespace Tests
 
 
 
-        public void FillBT(BusinessTrip bt)
+        public static void FillBT(BusinessTrip bt)
         { 
-            bt.Departure = emp.Office.Location;
             bt.Destination = new Location("X");
             bt.StartingDate = new DateTime(2017,4,2);
             bt.EndDate = new DateTime(2017, 4, 2);
-            bt.Phone = phone;
-            bt.BankCard = bankCard;
+            bt.Phone = "112";
+            bt.BankCard = "1502 4023 3453 3252";
             bt.MeanOfTransportation = "Bus";
         }
 

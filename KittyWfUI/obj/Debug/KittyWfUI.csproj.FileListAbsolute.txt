@@ -1,0 +1,11 @@
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\bin\Debug\KittyWfUI.exe.config
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\bin\Debug\KittyWfUI.exe
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\bin\Debug\KittyWfUI.pdb
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\obj\Debug\KittyWfUI.csprojResolveAssemblyReference.cache
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\obj\Debug\KittyWfUI.Properties.Resources.resources
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\obj\Debug\KittyWfUI.csproj.GenerateResource.Cache
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\obj\Debug\KittyWfUI.exe
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\obj\Debug\KittyWfUI.pdb
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\bin\Debug\Kitty.exe
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\bin\Debug\Kitty.pdb
+C:\Users\iquest\Source\Repos\kitty3\KittyWfUI\obj\Debug\KittyWfUI.Form1.resources

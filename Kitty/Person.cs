@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,10 @@ namespace Kitty
 {
     abstract public class Person
     {
-        protected string name;
-        protected string mailAddress;
-        public string password;
+        protected string name { get; set; }
+
+        [Key]
+        public string mailAddress { get; set; }
 
         public Person()
         {
@@ -21,7 +23,7 @@ namespace Kitty
         {
             this.name = name;
         }
-
+        //aa
         public string Name
         {
             get {
