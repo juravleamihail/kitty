@@ -202,6 +202,7 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\RegisterBTController.cs" />
     <Compile Include="Controllers\SettingsBusinessTripController.cs" />
+    <Compile Include="Controllers\UploadFileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -286,6 +287,8 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\LoggedIn.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\UploadFile\Index.cshtml" />
+    <Content Include="Views\UploadFile\Succes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
